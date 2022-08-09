@@ -9,15 +9,18 @@ import {
   PercentageSpan,
 } from './DownloadStatsStyled';
 
-export function Statistics({ data }) {
+export function Statistics({ title = null, stats }) {
   return (
-    <StatsSection>
-      <StatsList>
-        {data.map(item => {
+    <StatsSection className="statistics">
+      {title && <Title className="title">{title}</Title>}
+      <StatsList className="stat-list">
+        {stats.map(item => {
           return (
-            <StatItem key={item.id}>
-              <Label>{item.label}</Label>
-              <PercentageSpan>{item.percentage}</PercentageSpan>
+            <StatItem className="item" key={item.id}>
+              <Label className="label">{item.label}</Label>
+              <PercentageSpan className="percentage">
+                {item.percentage + `%`}
+              </PercentageSpan>
             </StatItem>
           );
         })}
