@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { Box } from '../Box';
 import {
   StatsSection,
   Title,
