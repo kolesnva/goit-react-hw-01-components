@@ -14,7 +14,17 @@ export function UserInfo(user) {
   const { username, tag, location, avatar, stats } = user;
 
   return (
-    <Box className="profile">
+    <Box
+      className="profile"
+      width="400px"
+      mt={4}
+      ml="auto"
+      mr="auto"
+      p={4}
+      border="1px solid black"
+      borderRadius="lg"
+      bg="muted"
+    >
       <Box className="description">
         <UserImage src={avatar} alt="user avatar" className="avatar" />
         <UserName className="name">{username}</UserName>
@@ -23,15 +33,15 @@ export function UserInfo(user) {
       </Box>
       <UserStatsList className="stats">
         <StatItem>
-          <ItemSpan className="label">Followers</ItemSpan>
+          <ItemSpan className="label">Followers: </ItemSpan>
           <ItemSpan className="quantity">{stats.followers}</ItemSpan>
         </StatItem>
         <StatItem>
-          <ItemSpan className="label">Views</ItemSpan>
+          <ItemSpan className="label">Views: </ItemSpan>
           <ItemSpan className="quantity">{stats.views}</ItemSpan>
         </StatItem>
         <StatItem>
-          <ItemSpan className="label">Likes</ItemSpan>
+          <ItemSpan className="label">Likes: </ItemSpan>
           <ItemSpan className="quantity">{stats.likes}</ItemSpan>
         </StatItem>
       </UserStatsList>
