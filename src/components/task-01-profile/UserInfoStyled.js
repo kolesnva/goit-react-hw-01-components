@@ -24,7 +24,7 @@ export const UserLocation = styled.p`
 export const UserStatsList = styled.ul`
   display: flex;
   list-style: none;
-  gap: ${p => p.theme.space[4]};
+  gap: ${p => p.theme.space[4]}px;
 `;
 export const StatItem = styled.li``;
 export const ItemSpan = styled.span``;
