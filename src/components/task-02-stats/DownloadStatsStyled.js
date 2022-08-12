@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 export const StatsSection = styled.section`
   width: 400px;
-  margin-top: 50px;
+  margin-top: ${p => p.theme.space[6]}px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: ${p => p.theme.space[4]}px;
+  padding-right: ${p => p.theme.space[4]}px;
   border: ${p => p.theme.borders.normal};
   background-color: ${p => p.theme.colors.muted};
 `;
@@ -16,7 +16,7 @@ export const Title = styled.h2`
 export const StatsList = styled.ul`
   list-style: none;
   display: flex;
-  padding: 0px;
+  padding: ${p => p.theme.space[0]}px;
 `;
 export const StatItem = styled.li`
   flex-grow: 1;
