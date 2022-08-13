@@ -11,7 +11,13 @@ import {
 } from './UserInfoStyled';
 
 export function UserInfo(user) {
-  const { username, tag, location, avatar, stats } = user;
+  const {
+    username,
+    tag,
+    location,
+    avatar,
+    stats: { followers, views, likes },
+  } = user;
 
   return (
     <Box
@@ -34,15 +40,15 @@ export function UserInfo(user) {
       <UserStatsList className="stats">
         <StatItem>
           <ItemSpan className="label">Followers: </ItemSpan>
-          <ItemSpan className="quantity">{stats.followers}</ItemSpan>
+          <ItemSpan className="quantity">{followers}</ItemSpan>
         </StatItem>
         <StatItem>
           <ItemSpan className="label">Views: </ItemSpan>
-          <ItemSpan className="quantity">{stats.views}</ItemSpan>
+          <ItemSpan className="quantity">{views}</ItemSpan>
         </StatItem>
         <StatItem>
           <ItemSpan className="label">Likes: </ItemSpan>
-          <ItemSpan className="quantity">{stats.likes}</ItemSpan>
+          <ItemSpan className="quantity">{likes}</ItemSpan>
         </StatItem>
       </UserStatsList>
     </Box>
